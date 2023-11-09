@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mask.css">
+    <link rel="shortcut icon" href="favicoon.jpg" type="image/x-icon">
+
+    <title>The Face Mask And Cough Detector.(Machine Learning)</title>
+</head>
+
+<body>
+
+    <h3 id="h3"></h3>
+
+    <div class="highp">
+        <h1 class="the">The Face Mask And Cough Detector . (ML)</h1>
+    </div>
+    <div class="infor">
+        <p> &star; Information &star;</p>
+    </div>
+    <div class="information">
+
+        <h2>&starf; What Is The Product ?</h2>
+        <p>
+            The Product Is ' The Face Mask And Cough Detector (Machine Learning)'. This Product Detects That Is Anyone Were a Face Mask Or Not As Well As Is Anyone Have Cough via Detecting The Surrounding Sound.<br>
+
+        </p>
+        <hr>
+        <h2>&starf; What Is Need Of The Product ?</h2>
+        <p>In these times of Covid-19 pandemic Wearing a mask is as essential now as ever. When Stepping Out Of Home So We Must Were a Face Mask At Every Public Place. It Will Detect Face Mask Is Put On Or Not. If Anyone Not Were a Mask Or Anyone Have Cough
+            Then The Product Will Alarm The Device, It Will Helps To Other Persons For Keep Distance From That Person. </p>
+        <hr>
+        <h2>&starf; Where To Use ? (Users)</h2>
+        <p>
+            &bull; Hospitals<br>&bull; Schools<br>&bull; Collages <br>&bull; Temples <br>&bull; Shopping Malls Etc.
+
+        </p>
+        <hr>
+        <h2>&starf; What Are The Benefits To The Users ?</h2>
+        <p>
+            &bull; The Face Mask Detector Gives Lot Of Benefits Like We Can Find Out The Ill Person And also Who Not were a Face Mask. <br><br> &bull; The Product Will Give Alert Also We can Instruct That Person Who Not Were A Face Mask. <br><br>&bull;
+            Its Is Very Costly To Stand any Person To Do The Observation. <br><br>&bull; The Product Is Multitasker. <br><br>&bull; The Product Can Observe To Large Area At a Time.<br><br>&bull; The Product Is At Low Prise And Smart.
+
+        </p>
+
+
+    </div><br><br>
+    <hr>
+
+    <h1>&star; How To Use ???</h1>
+    <div class="how">
+        <h3>&bull; Step :- 1</h3>
+        <p>
+            First Of All We Must Have Internet Connection. If You Are Not Connect To Internet Then It Will Pop Up The Massage. Enter Your Name And Read All Information If You Want .<br><br> When We Click Start Wait For 6 -7 Seconds For Collecting The
+            Data.
+            <br>
+            <img src="popup.PNG" alt="">&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+            <img src="pupname.PNG" alt="">
+            <img src="button2 - Copy.PNG" alt="">
+        </p>
+        <hr>
+        <h3>&bull; Step :- 2</h3>
+        <p> First, Let's See How The Mask Detector Works ???<br><br> Were a Mask And Show Face In Webcam As Soon As The Module Detect It Will Show The <br> Result Like :-<br> &bullet; Face With Mask -
+            <o class="g"> Green Light.</o><br> &bullet; Face Without Mask -
+            <o class="r"> Red Light With Buzzer. </o><br> &bullet; No Anyone In Front Of Camera -
+            <o class=""> Black Light. </o><br> And Also Highlight Some Sentence.<br>
+            <img class="img" src="photp.PNG" alt="">
+            <img class="img" src="pwm.PNG" alt="">
+            <img class="img" src="pwb.PNG" alt="">
+
+
+        </p>
+        <hr>
+        <h3>&bull; Step :- 3</h3>
+        <p>
+            Now Let's See How The Cough Detector Works ???<br><br> All Process Is Same Like Mask Detector. Only We Have To Make Cough Sound And It will Buzzer !!! <br> &bullet; Background Noise -
+            <o class=""> Black Light. </o><br> &bullet; Cough Sound -
+            <o class="r"> Red Light With Buzzer. </o><br>
+            <img class="im" src="cs.PNG" alt=""><img class="im" src="bn.PNG" alt="">
+        </p>
+
+    </div>
+    <hr>
+    <div id="ma">
+        <h1>&starf; The Main Project &starf;</h1>
+        <h2>&star; The Face Mask Detector. &star;</h2>
+        <div class="mask">
+
+
+
+
+            <div class="ml">
+
+
+                <div id="webcam-container"></div>
+                <div id="label-container"></div>
+                <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+
+
+            </div>
+            <div class="all">
+                <div class="sen">
+                    <h4 class="sen1" id="se1">&Star; Great !<br> Mask Available.&#128515;</h4>
+                    <h4 class="sen2" id="se2">&Star; Bad Habit,<br> Mask Not Available.&#128543;</h4>
+                    <h4 class="sen3" id="se3">&Star; No Anyone Here.</h4>
+                </div>
+
+                <div class="container">
+
+                    <div class="circle" color="green" id="green"></div>
+                    <div class="circle red" color="red" id="red"></div>
+                    <div class="circle" color="yellow" id="yellow"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="sentance">
+                <p id="sente1">&star; Its Great !!!<br>You were a Face Mask </p>
+                <p id="sente2">&star; Ooooo...!<br> You Don't Were a Mask.<br> We Request You,<br> Kindly Were a Mask At Public Place . </p>
+                <p id="sente3">&star; Ops !<br> No Anyone In front Of Camera. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bt">
+        <button type="button" id="btn" onclick="init();"><a class="b" href="#ma">Start</a></button> &bigstar;
+        <button type="button" class="btu" onclick="reload()">Stop</button>
+    </div>
+
+
+
+    <h2>&star; The Cough Detector. &star; </h2>
+    <div class="contain">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="box">
+                    <div class="circle_ripple"></div>
+                    <div class="circle_ripple-2"></div>
+                    <div class="circl">
+                        <div class="circle-2">
+                            <img class="mic" src="outline_mic_black_24dp.png" alt="Mic">
+                        </div>
+                    </div>
+                    <div class="progress blue">
+                        <span class="progress-left">
+                      <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                      <span class="progress-bar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cough">
+        <div class="vo">
+
+
+            <div id="label"></div>
+            <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+
+        </div>
+
+        <div class="container">
+
+            <div class="circle" color="yellow" id="yellow2"></div>
+            <div class="circle red" color="red" id="red2"></div>
+        </div><br>
+    </div>
+
+
+    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+        <h2>Feedback Form.</h2>
+        <p>Please Fill Free To Give Any Suggestion About Website .</p>
+
+        Your name: <br>
+        <input type="text" placeholder="Ex. Om Swami" name="realname"><br>
+        <br> Your email: <br>
+        <input type="email" placeholder="Ex. Omswami@gmail.com" name="email"><br>
+        <br> Your Feedback: <br>
+        <textarea name="comments" placeholder="About Website" rows="15" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+
+    <h2>Thank You !!!</h2>
+
+    <script src="Mask.js"></script>
+    <script src="cough.js"></script>
+
+</body>
+
+</html>
